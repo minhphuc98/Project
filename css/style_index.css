@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#232323;
+}
+
+
+.logo{
+	width:100%;
+	
+}
+
+
+
+.logo img{
+	display:block;
+	margin:0 auto;
+}
+
+.leslideshow{
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
+
+
+.tieudedaidien,.leproduct{
+	
+	margin-top:50px;
+	margin-bottom:20px;
+}
+
+.tieudedaidien h1{
+	color:#FFF;
+	text-align:center;
+	font-style:normal;
+}
+
+.leimgdaidien{
+	margin-bottom:20px;
+}
+
+
+.tieudeabout{
+	background-color:#CCC;
+	padding:20px 0px;
+}
+
+
+
+.tieudeabout h1{
+	color:#FFF;
+	text-align:center;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 40px;
+	margin:0px;
+}
+
+.tieudeabout h2{
+
+	text-align:center;
+	margin:0px;
+}
+
+.tieudeabout p{
+	font-size:20px;
+	margin:0px;
+	padding:10px;
+}
+
+
+
+.thongtinlienhe{
+	background-color:#CCC;
+	margin-top:50px;
+	margin-bottom:50px;
+	padding-bottom:20px;
+	margin:0 auto;
+}
+
+.thongtinquangcao h1{
+	
+	color:#F60;
+	text-align:center;
+	padding:20px 0px;
+}
+
+.thongtinquangcao p{
+	
+	font-size:20px;
+}
+
+.thongtinsukien h1{
+	color:#F03;
+	text-align:center;
+}
+
+
+
+.thongtinsukien p{
+	font-size:20px;
+}
+
+.thongtinsukien{
+	background-color:#EEE;
+}
+
+
+.borderfooter{
+	border-top: solid 3px #FFF;
+}
+.product{
+	margin:10px;
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	border:solid 1px #FFFFFF;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding-top:10px;
+	padding-left:10px;
+	background-color:#FFF;
+}
+
+.product img{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width:96%;
+}
+
+.leproduct h1{
+	text-align:center;
+	color:#FFF;
+	font: "Roboto Black";
+	font-size: 40px;
+	
+}
+
+.product h3{
+	color:#F60;
+	text-align:center;
+	
+	
+}
+
+.product .price{ 
+	text-align:center;
+	color:#090;
+	font-size:20px;
+}
+
+.product .btn{
+	padding:10px;
+	background-color:#999;
+	color:#FFF;
+	font-weight:bold;
+	margin-bottom:10px;
+	-webkit-box-shadow: 0px 0px 14px 1px rgba(11,189,180,1);
+	-moz-box-shadow: 0px 0px 14px 1px rgba(11,189,180,1);
+	box-shadow: 0px 0px 14px 1px rgba(11,189,180,1);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+	
+	
+.product .simple-caption {
+			
+			height: 250px;
+			width: 100%;
+			display: block;
+			bottom: -250px; 
+			left: 0;
+			opacity:0;        	
+			line-height: 30px;
+			text-align:justify;
+			background-color: rgba(115, 114, 114, 0.6);        	
+			position: absolute;
+			color: #fff;
+			-webkit-border-bottom-right-radius: 10px;
+			-webkit-border-bottom-left-radius: 10px;
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			-webkit-transition: all 300ms ease-out;
+			-moz-transition: all 300ms ease-out;
+			-o-transition: all 300ms ease-out;
+			-ms-transition: all 300ms ease-out;	
+			transition: all 300ms ease-out;
+			
+				
+		}
+		
+.product:hover .simple-caption {
+			-moz-transform: translateY(-100%);
+			-o-transform: translateY(-100%);
+			-webkit-transform: translateY(-100%);
+			opacity: 1;
+			transform: translateY(-100%);
+		}
+		
+.product .simple-caption p { margin:0px; padding-left:5px;}
+
+
+#accessories h1{
+	color:#FFF;
+	text-align:center;
+	padding-bottom:20px;
+	font: "Roboto Black";
+	font-size: 40px;
+}
+
+#accessories{
+	background-color:#CCC;
+	padding-top:10px;
+	padding-bottom:30px;
+}
+	
+.bogoc_dobong{
+	border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+
+}
+
+.bogoc_dobong img{
+	
+	border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+
+-webkit-box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
+}
+
+.letintuc{
+	background-color:#CCC;
+	padding-bottom:20px;
+}
+
+.letintuc h1{
+	color:#FFF;
+	text-align:center;
+	font: "Roboto Black";
+	font-size: 60px;
+}
+
+.letintuc p{
+	font-size:20px;
+}
+
+/*Xử lý cho trang contact*/
+
+
+
+.thongtinlienhe h1{text-align:center; margin-top:30px; color:#FFF;}
+
+.thongtinlienhe h2{text-align:center; margin-top:30px;}
+
+
+.thongtinlienhe iframe{
+	min-width:600px;
+	min-height:400px;
+}
+
+@media screen and (max-width:1024px)
+{
+	.thongtinlienhe iframe{
+		min-width:690px;
+		min-height:320px;
+		
+	}
+}
+
+
+@media screen and (max-width:640px)
+{
+	.thongtinlienhe iframe{
+		min-width:320px;
+		min-height:320px;
+		
+	}
+}

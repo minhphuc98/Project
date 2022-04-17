@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ELLE Shop</title>
+
+    <!-- Bootstrap -->
+    <script src="js/Jquery.js"></script>
+    <script src="js/modernizr.js"></script>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style_index.css">
+   <link rel="stylesheet" type="text/css" href="css/cssfooter.css">
+   <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+   
+   <!--Xử lý slideshow-->
+   
+    <script src="js/jssor.slider-26.5.2.min.js" type="text/javascript"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:800,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Align: 0,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1920;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        });
+    </script>
+    <style>
+        /* jssor slider loading skin spin css */
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .jssorb051 .i {position:absolute;cursor:pointer;}
+        .jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+        .jssorb051 .i:hover .b {fill-opacity:.7;}
+        .jssorb051 .iav .b {fill-opacity: 1;}
+        .jssorb051 .i.idn {opacity:.3;}
+
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
+   
+   
+   <!--Xử lý cho phần hiệu ứng-->
+   <link rel="stylesheet" type="text/css" href="css/style_effect.css">
+    <script>
+		$(document).ready(function(){
+			if (Modernizr.touch) {
+				// show the close overlay button
+				$(".close-overlay").removeClass("hidden");
+				// handle the adding of hover class when clicked
+				$(".img").click(function(e){
+					if (!$(this).hasClass("hover")) {
+						$(this).addClass("hover");
+					}
+				});
+				// handle the closing of the overlay
+				$(".close-overlay").click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					if ($(this).closest(".img").hasClass("hover")) {
+						$(this).closest(".img").removeClass("hover");
+					}
+				});
+			} else {
+				// handle the mouseenter functionality
+				$(".img").mouseenter(function(){
+					$(this).addClass("hover");
+				})
+				// handle the mouseleave functionality
+				.mouseleave(function(){
+					$(this).removeClass("hover");
+				});
+			}
+		});
+	</script>
+    
+    
+    <!--Xử lý phần sale-->
+    <script src="js/easyjquerygallery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/easyjquerygallery.min.css">
+    
+    
+    <!--Xử lý phụ kiện-->
+    
+    <style>
+    .carousel-inner .active.left { left: -25%; }
+    .carousel-inner .next        { left:  25%; }
+    .carousel-inner .prev        { left: -25%; }
+    .carousel-control            { width:  4%; }
+    .carousel-control{margin-left:15px;background-image:none !important;}
+</style>
+   
+  </head>
+  <body>
+  
+  <div class="container-fluid">
+  		<div class="row">
+        	<div class="col-md-12 logo">
+            	<img src="images/logo01.png"/>
+            </div>
+        </div>
+   
+     <div class="row">
+     	
+        <nav class="navbar navbar-default" id="navbar">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"></a>
+            </div>
+           
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#index">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#aboutus">About US</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#saleoff">SaleOFF</a></li>
+                <li><a href="#accessories">Accessories</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+              </ul>
+              <form class="navbar-form navbar-right">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+     
+     </div><!-- Kết thúc  div menu-->
+     
+     <!--Bắt đầu nội dung cho trang index-->
+     
+     <div class="row" id="index">
+     
+     	<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="images/paner2.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="images/panner1.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="images/panner3.jpg" />
+            </div>
+             <div>
+                <img data-u="image" src="images/PANNER4.jpg" />
+            </div>
+            
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+     
+     
+     </div> <!--Kết thúc slideshow-->
+      
+      
+     <!-- Phần nội dung của ảng đại diện các mẫu thời trang-->
+      
+      <div class="row tieudedaidien">
+      
+      	<div class="col-md-12">
+        	<h1> Choose One You Love </h1>
+        </div>
+      
+      </div>
+      
+      
+      <div class="row tieudedaidien">
+      
+      	<div class="col-md-3 col-sm-6 leimgdaidien">
+             <div id="effect-5" class="effects clearfix">
+            	<div class="img">
+                	<img src="images/product.png" alt="">
+                <div class="overlay">
+                    <a href="#product" class="expand">+</a>
+                   
+                </div>
+            </div>
+            
+        	</div>
+        
+       </div>
+       
+       
+       <div class="col-md-3 col-sm-6 leimgdaidien">
+             <div id="effect-5" class="effects clearfix">
+            	<div class="img">
+                	<img src="images/SALE.png" alt="">
+                <div class="overlay">
+                    <a href="#saleoff" class="expand">+</a>
+                   
+                </div>
+            </div>
+            
+        	</div>
+        
+       </div>
+       
+       
+       <div class="col-md-3 col-sm-6 leimgdaidien">
+             <div id="effect-5" class="effects clearfix">
+            	<div class="img">
+                	<img src="images/phukien.png" alt="">
+                <div class="overlay">
+                    <a href="#accessories" class="expand">+</a>
+                   
+                </div>
+            </div>
+            
+        	</div>
+        
+       </div>
+       
+       
+        <div class="col-md-3 col-sm-6">
+             <div id="effect-5" class="effects clearfix">
+            	<div class="img">
+                	<img src="images/news.png" alt="">
+                    <div class="overlay">
+                        <a href="#news" class="expand">+</a>
+                       
+                    </div>
+            	</div>
+            
+       		 </div>
+        
+      	</div>
+        
+        
+        
+      </div> <!--Kết thúc phần ảnh đại diện-->
+      
+      
+      <!--phần trình bày About US-->
+      
+      <div class="row tieudeabout" style="margin-top:30px;" id="aboutus">
+      
+      	<div class="col-md-12">
+        	<h1> ABOUT US</h1>
+        </div>
+      
+      </div>
+      
+      
+    <div class="row tieudeabout">
+      <div class="col-md-12">
+        <h2> The Story About us </h2>
+        <p> In 2004, we met as graduate students at Dong Nai of Technology University. </p>
+        <p> While Nam Korea was planning to open a fashion shop that be a hit in fashion market, but he had no idea what he should focus on., we started to notice something curious: Customers- our Women was confused about so many brands of fashion to choose, and they need something diffirent and reputation. So, Nam Korea contacted Quang and Phuc to make a Women Fashion Brand, so we have been spending 3 years to research and develop the ultimate solutions to serve our customers with the most effective way. </p>
+        <p> Then, in 2007, we opened our first shop at Bien Hoa, Viet Nam. After 11 years, we’re proud to be one of most famous fashion brand for Women.</p>
+      </div>
+    </div>
+        
+        <div class="row tieudeabout">
+        	
+            <div class="col-md-12">
+            	<h1 style="margin-bottom:60px; font-size:40px;"> List of ELLE'S SHOP</h1>
+            </div>
+            
+          <div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1">
+            	<img src="images/about01.png" class="img-responsive" />
+                
+                <ul style="list-style:square; margin-top:30px; padding:5px;font-size:20px;">
+                    <li> Address 1 : Kp5 Nguyen Khuyen, Trang Dai, Bien Hoa, Dong Nai, Viet Nam. </li>
+                    <li> Phone number : 0121 816 7790 </li>
+				</ul>
+          </div>
+            
+             <div class="col-md-5 col-sm-5 col-md-offset-1">
+                <img src="images/about02.png" class="img-responsive" />
+                
+                <ul style="list-style:square; margin-top:30px; padding:5px; font-size:20px;">
+                    <li> Address 2 : 257 Peter Parker St, District 13, Gotham City, Canada. </li>
+                    <li>Phone number: 0912 666 666 </li>
+                </ul>
+
+            </div>
+        
+        
+      </div> <!--Kết thúc phần trình bày About US-->
+      
+      
+      
+      <!-- phần trình bày sản phẩm-->
+      
+      <div class="row leproduct" id="product">
+      
+      	<div class="col-md-12">
+        	<h1> OUR PRODUCTS</h1>
+        </div>
+      
+      </div>
+    
+    <div class="row"  style="margin-bottom:20px;">
+    	
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-1.png" class="img-responsive" />
+                
+                <h3> Adidas Ultra Boost 4.0
+				<p/> “Multi-Colour” <p/> </h3>
+                <p class="price"> Price : $130</p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p> 
+                        TPU support heel cup<br/>
+                        Energy returning BOOST mid sole<br/>
+                        All sizes are listed in U.S. Men's sizing unless stated otherwise<br/>
+                        Style no: CP9251<br/>
+                        Size: 7, 7.5, 8, 8.5, 9<br/>
+                     </p> 
+                </span>
+            
+            </div>
+            
+           
+        
+        </div>    
+           
+        
+        
+         <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-2.png" class="img-responsive" />
+                
+                <h3>Adidas Ultra Boots 4.0 
+				<p/> Blue Spirit/Carbon <p/> </h3>
+                <p class="price"> Price : $180 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                <span class="simple-caption">
+                      <p> 
+                         Engineered mesh upper<br/>
+                         Boost's energy-returning<br/>
+                         Bootie construction for a comfortable fit<br/>
+                         Grippy rubber outsole<br/>
+                         Style no: BC0251<br/>
+                         Size: 7, 7.5, 8, 8.5, 9<br/>
+                     </p> 
+                </span>
+            
+            </div>
+            
+            
+        
+        </div>    
+        
+        
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-3.png" class="img-responsive" />
+                
+                <h3>Adidas Ultra Boots 4.0
+				<p/> Grey/Hire Grey <p/> </h3>
+                <p class="price"> Price : $180 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p> 
+                          Primeknit upper<br/>
+                          TPU support heel cup<br/>
+                          Energy returning BOOST mid sole<br/>
+                          All sizes are listed in U.S. Men's sizing unless stated otherwise<br/>
+                          Style no: CP9251 <br/>
+                          Size: 7, 7.5, 8, 8.5, 9<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>    
+        
+        
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-4.png" class="img-responsive" />
+                
+                <h3>Skirt Black-White- TH04</h3>
+                <p class="price"> Price : $40 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p> Skirt Black-White- TH04<br/>
+                          Material: Cotton <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>    
+           
+       
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-5.png" class="img-responsive" />
+                
+                <h3>White Shirt- TH05</h3>
+                <p class="price"> Price : $35 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p> White Shirt- TH05<br/>
+                          Material: kate <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>    
+        
+        
+         <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-6.png" class="img-responsive" />
+                
+                <h3>Dark-Blue Shirt- TH06</h3>
+                <p class="price"> Price : $45 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p> Dark-Blue Shirt- TH06<br/>
+                          Material: Cotton <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>  
+        
+         <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-7.png" class="img-responsive" />
+                
+                <h3>Dark- Blue Sweater- TH07</h3>
+                <p class="price"> Price : $50 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p> Dark- Blue Sweater- TH07<br/>
+                          Material: kate <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>    
+             
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-8.png" class="img-responsive" />
+                
+                <h3>Black-White Shirt- TH08</h3>
+                <p class="price"> Price : $52 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                     <p>Black-White Shirt- TH08<br/>
+                          Material: kate <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>   
+        
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-9.png" class="img-responsive" />
+                
+                <h3>Greenlanter Skirt- TH09</h3>
+                <p class="price"> Price : $54 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                     <p>Greenlanter Skirt- TH09<br/>
+                          Material: Cotton <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>    
+                    
+        
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-10.png" class="img-responsive" />
+                
+                <h3>Greenlanter Skirt- TH10</h3>
+                <p class="price"> Price : $60 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p>Greenlanter Skirt- TH10<br/>
+                          Material: Cotton 30%, Kate 70% <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>   
+        
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-11.png" class="img-responsive" />
+                
+                <h3>White Shirt- TH11</h3>
+                <p class="price"> Price : $65 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p>White Shirt- TH11<br/>
+                          Material: Cotton <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>   
+        
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product">
+            	<img src="images/Untitled-12.png" class="img-responsive" />
+                
+                <h3>Darkness Skirt- TH12</h3>
+                <p class="price"> Price : $68 </p>
+    			<div class='btn'>Add to cart</div>
+                
+                 <span class="simple-caption">
+                      <p>Darkness Skirt- TH12<br/>
+                          Material: kate <br/>
+                         Size: M,L,S<br/>
+                     </p> 
+		 		 </span>
+            
+            </div>
+        
+        </div>   
+      
+    </div> <!--Kết thúc phần sản phẩm-->
+    
+      
+      
+       
+      <!-- phần trình bày sale-->
+      
+      <div class="row leproduct" id="saleoff">
+      
+      	<div class="col-md-12">
+        	<h1> SALE OFF</h1>
+        </div>
+      
+      </div>
+    
+    <div class="row" id="product" style="margin-bottom:20px;">
+    	
+        <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale1.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall1.png" alt="Office Rose set- TH29"/>
+                </a>
+                
+                <h3>Office Rose set- TH29</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+      </div>  
+            
+          
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale2.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall2.png" alt="Office Midnight Skirt- TH30"/>
+                </a>
+                
+                <h3>Office Midnight Skirt- TH30</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div> 
+          
+           
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale3.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall3.png" alt="Office Sexy Night - TH31"/>
+                </a>
+                
+                <h3>Office Sexy Night - TH31</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div>  
+          
+          
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale4.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall4.png" alt="Office Full Black - TH32"/>
+                </a>
+                
+                <h3>Office Full Black - TH32</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div>    
+            
+          
+          
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale5.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall5.png" alt="Office Full Red- TH33"/>
+                </a>
+                
+                <h3>Office Full Red- TH33</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div>    
+          
+          
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale6.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall6.png" alt="Office Full Red 02 - TH34"/>
+                </a>
+                
+                <h3>Office Full Red 02 - TH34</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div>    
+          
+          
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale7.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall7.png" alt="Office Silver Black - TH35"/>
+                </a>
+                
+                <h3>Office Silver Black - TH35</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div>    
+          
+          
+          <div class="col-md-3 col-sm-6">
+        	
+            <div class="product pluginSelector">
+            	 <!--Chèn hình hiển thị trong lightbox ở đây-->
+                <a href="images/sale/sale8.png">  
+                    
+                    <!--Chèn hình gallary ở đây-->
+                  <img class="img-responsive" src="images/sale/salesmall8.png" alt="Office Shirt black- TH36"/>
+                </a>
+                
+                <h3>Office Shirt black- TH36</h3>
+                <p class="price"> Price : $30 </p>
+    			<div class='btn'>Add to cart</div>
+               
+            </div>
+            
+          </div>    
+          
+        
+    </div>   <!--Kết thúc phần sale -->
+    
+      
+       <!-- phần trình bày phụ kiện-->
+      
+      <div class="row" id="accessories">
+      
+      	<div class="col-md-12">
+        	<h1> ACCESSORIES WITH SAME PRICES 50$</h1>
+        </div>
+      
+      </div>
+    
+     <div class="row" style="margin-bottom:20px; background-color:#CCC; padding-bottom:30px;">
+      
+          <div class="col-md-12">
+          <div class="carousel slide" id="myCarousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien2.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien3.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien6.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien7.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien8.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien10.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien12.png" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+              <div class="col-xs-3 bogoc_dobong"><a href="#"><img src="images/imgphukien/phukien1123.png" class="img-responsive"></a></div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        </div>
+    </div>
+      
+      
+    </div> <!--Kết thúc phần phụ kiện-->
+      
+   
+   	 <!-- phần trình bày tin tức-->
+      
+      <div class="row letintuc" id="news" style="margin-top:30px;">
+      
+      	<div class="col-md-12">
+        	<h1>NEWS</h1>
+        </div>
+      
+      </div>
+   	  
+      
+      <div class="row letintuc">
+      
+      		
+            <div class="col-md-3 col-sm-4 col-md-offset-1 col-sm-offset-1">
+            
+            	<img src="images/tintuc.png" class="img-responsive" />
+                
+            </div>
+            
+            <div class="col-md-7 col-sm-6">
+            	<h2> THE SEASON 18 PARIS FASHION WEEK REPORT </h2>
+            	<p>
+            	
+                Everything you need to know about the new season...from big macs and fluttery dresses to the return of the ball-gown.
+                
+            </p>
+            <p>Show you the new vision of professional fashion designers this year.
+            </p>
+            <p>Here's our primer on Paris.... </p>
+            
+            </div>
+      
+      </div>
+   		
+   
+     <div class="row letintuc" style="margin-bottom:20px;">
+      
+            <div class="col-md-7 col-sm-6 col-md-offset-1 col-sm-offset-1">
+            	<h2> PARIS, France — According to a French media report in Le Point, Azzedine Alaïahas passed away at the age of 77</h2>
+            	<p>
+
+					Alaïa was one of the industry’s few designers willing to follow his own conventions and ignore fashion schedules, creating his collections at his own pace. His ability to do so stemmed from his prodigious talent and fashion’s seemingly insatiable appetite for his designs. His skill at cutting and his idiosyncratic takes on classic silhouettes have made Alaïa popular for decades; his designs remain the aspirational zenith for many.
+
+                </p>
+            
+            </div>
+            
+            <div class="col-md-3 col-sm-4 ">
+            
+            	<img src="images/tintuc_02.png" class="img-responsive" />
+                
+            </div>
+            
+      
+    </div> <!--Kết thúc phần tin tức-->
+   
+   <!--	phần trình bày trang liên hệ-->
+    
+    
+   <div class="row" id="contact" style="margin-bottom:10px;">
+    		
+            
+        <div class="col-md-12 thongtinlienhe">
+        	<h1>WHERE TO FIND US</h1>
+            	
+                <div class="col-md-5 col-md-offset-1">
+                
+                    <h2>Anything you need?</h2>
+                    <form>
+                          <div class="form-group">
+                            <label for="exampleInputhoten">Name</label>
+                            <input type="text" class="form-control" id="exampleInputhoten" placeholder="Enter Your name">
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                          </div>
+                          
+                          
+                          <div class="form-group">
+                            <label for="exampleInputmessage">Messages</label>
+                            <textarea rows="6" class="form-control" id="exampleInputmessage" placeholder="Enter Message">
+                            
+                            </textarea>
+                          </div>
+                          
+                          
+                          
+                          
+                          <button type="submit" class="btn btn-default">Send</button>
+                    </form>
+                    
+                </div>
+ 
+          <div class="col-md-5 col-md-offset-1">
+                    <h2>Our Location</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15666.873995523674!2d106.8691285!3d10.9846076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3ff1538c511f05d7!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBDw7RuZyBOZ2jhu4cgxJDhu5NuZyBOYWk!5e0!3m2!1svi!2s!4v1539653548421" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      
+    </div> <!--Kết thúc nội dung liên hệ-->
+      
+   
+   
+   
+   
+   
+   
+        
+       <!-- Nội dung footer-->
+            <div class="row borderfooter">
+              <div class="col-md-4 col-md-offset-1 col-sm-6  col-sm-offset-1 footerleft ">
+                <div class="logofooter"><img src="images/logo_footer.png"/>  </div>
+                <p>ELLE shop is a brand of fashion for woman established since 2007s. We're proud to take first steps in Viet Nam fashion industry. Nowadays, ELLE shop is one of top fashion in fashion market of South-Eastern ASIA....</p>
+               <p><i class="fa fa-map-pin"></i> Kp5 Nguyen Khuyen, Trang Dai, Bien Hoa, Dong Nai, Viet Nam</p>
+                <p><i class="fa fa-phone"></i> Phone (VietNam) : 0121 816 7790</p>
+                <p><i class="fa fa-map-pin"></i> 257 Peter Parker St, Distric 13, Gotham City, Canada</p>
+				<p><i class="fa fa-phone"></i> Phone (Canada) : +912 666666</p>
+                <p><i class="fa fa-envelope"></i> E-mail : ellehshop@gmail.com</p>
+                
+                
+           	  </div>
+                
+                
+              <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                <h6 class="heading7">GENERAL LINKS</h6>
+                <ul class="footer-ul">
+                  <li><a href="#"> Career</a></li>
+                  <li><a href="#"> Privacy Policy</a></li>
+                  <li><a href="#"> Terms & Conditions</a></li>
+                  <li><a href="#"> Client Gateway</a></li>
+                  <li><a href="#"> Ranking</a></li>
+                  <li><a href="#"> Case Studies</a></li>
+                  <li><a href="#"> Frequently Ask Questions</a></li>
+                </ul>
+              </div>
+              
+              <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                <h6 class="heading7">LATEST POST</h6>
+                <div class="post">
+                 <p>MOONLIGHT FASHION SHOW <span>December 17,2018</span></p>
+                  <p>THE SEASON 18 PARIS FASHION WEEK REPORT <span>December 20,2018</span></p>
+                  <p>RALPH LAUREN - Billionaire of fashion industry visits ELLE SHOP <span>December 15,2018</span></p>
+                </div>
+              </div>
+             
+            </div>
+         
+       
+        <!--footer start from here-->
+        
+          <div class="row copyright">
+            <div class="col-md-5">
+              <p>© 2017 - All Rights with ELLE SHOP</p>
+            </div>
+            <div class="col-md-7">
+              <ul class="bottom_ul">
+                <li><a href="#">Elleshop.com</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Site Map</a></li>
+              </ul>
+            </div>
+            
+          </div>
+        
+        
+     
+        
+ </div> <!--Kết thúc div contianer-fluid-->
+
+ 	
+        
+        
+   
+    <!--Thư viên javascript của Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    
+  <!-- Xử lý phần sale-->
+   
+   <script>
+		$(document).ready(function()
+		{
+		  $('.pluginSelector').easyGalleryJquery(
+			{
+				title:'Products best-selling 2017',
+				preloader:'images/loading.gif',
+				percent: 80
+			}
+		  );
+		});
+	</script>
+
+    
+    <!--Xử lý phụ kiện-->
+    
+    <script>
+		$(document).ready(function () {
+			$('#myCarousel').carousel({
+			  interval: 4000
+			})
+	
+			$('.carousel .item').each(function(){
+			  var next = $(this).next();
+			  if (!next.length) {
+				next = $(this).siblings(':first');
+			  }
+			  next.children(':first-child').clone().appendTo($(this));
+	
+			  for (var i=0;i<2;i++) {
+				next=next.next();
+				if (!next.length) {
+					next = $(this).siblings(':first');
+				}
+	
+				next.children(':first-child').clone().appendTo($(this));
+			  }
+			});
+		});
+	</script>
+    
+    
+    
+    <script>
+	
+    $(document).ready(function(){
+      $('.navbar-nav>li>a').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+          var $target = $(this.hash);
+          $target = $target.length && $target
+          || $('[name=' + this.hash.slice(1) +']');
+          if ($target.length) {
+            var targetOffset = $target.offset().top-100;
+            $('html,body')
+            .animate({scrollTop: targetOffset}, 1000);
+           return false;
+          }
+        }
+      });
+    });
+
+	</script>
+    
+    <script src="js/btn_top.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/btn_stop.css">
+    <div class="footer"> <a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"></a> </div>
+    
+    <script src="js/navbar.js"></script>
+  </body>
+  
+ 
+</html>
+
+
+

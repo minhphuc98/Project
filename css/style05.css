@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0 auto;padding:0px;background-color:#E6E6E6;}
+
+header{ height:50px; background-color:#090;}
+nav{ height:40px; background-color:#FF0;}
+.container aside{ min-height:300px; background-color:#F90;}
+
+.container article{ min-height:300px; background-color:#0FF;}
+
+footer{ height:100px; background-color:#090;}
+
